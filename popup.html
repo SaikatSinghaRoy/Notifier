@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Notifier</title>
+        <link rel="stylesheet" href="popup.css" />
+    </head>
+    <body>
+        <main id="main">
+            <div class="container">
+                <div class="title">
+                    <h1>Website Update Notifier</h1>
+                    <p>
+                        Monitor multiple websites from one simple tool. This
+                        will automatically check every 30 minutes and notify
+                        when something new happens. Fast, Private and Reliable.
+                    </p>
+                </div>
+
+                <div class="web-container">
+                    
+                </div>
+
+                <div class="add-container">
+                    <p>Add the website, let us watch it for you</p>
+                    <div class="add-site">
+                        <input
+                            type="text"
+                            placeholder="Enter the exact URL..."
+                            id="input-url"
+                            autocomplete="off"
+                        />
+                        <input
+                            type="text"
+                            placeholder="Give a Name..."
+                            id="input-name"
+                            maxlength="5"
+                            autocomplete="off"
+                        />
+                        <button class="add-btn">Add</button>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <script src="popup.js"></script>
+    </body>
+</html>

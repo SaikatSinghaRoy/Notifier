@@ -1,0 +1,19 @@
+{
+  "manifest_version": 3,
+  "name": "Notifier",
+  "version": "0.1.0",
+  "description": "Get notified when websites are updated",
+  "icons": {
+    "48": "icon/icon.png"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Check for Updates",
+    "default_icons": "icon/icon.png"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "permissions": ["storage", "alarms", "notifications"],
+  "host_permissions": ["<all_urls>"]
+}

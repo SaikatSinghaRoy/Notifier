@@ -1,0 +1,203 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+body {
+    background: black;
+}
+main {
+    width: 500px;
+    color: #e8e8e8;
+}
+.container {
+    width: 340px;
+    margin: 30px auto;
+}
+.container .title {
+    text-align: center;
+    margin-bottom: 30px;
+}
+.container .title h1 {
+    font-size: 28px;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+.container .title p {
+    font-size: 12px;
+    line-height: 13px;
+    color: #909090;
+}
+
+
+
+.web-container{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+.box{
+    height: 40px;
+    border: 2px solid #383737;
+    border-radius: 8px;
+    padding: 0 8.25px;
+    display: grid;
+    grid-template-columns: 45px 190px 60px 25px;
+    align-content: center;
+}
+.box .name{
+    margin: 0 10px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.box > .name > a{
+    text-decoration: none !important;
+    font-size: 8.5px;
+    line-height: 12px;
+    color: #909090;
+    max-width: 128px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.switch {
+	margin: auto;
+	
+	.switch_wrapper {
+		position: relative;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 2.4rem;
+		height: 1.3rem;
+		border: 1.6px solid white;
+		border-radius: 99rem;
+		transform-origin: left center;
+	}
+
+	.switch_toggle {
+		width: 1rem;
+		height: 1rem;
+		border-radius: 99rem;
+		box-shadow: inset 0 0 0 2px #fff;
+		transform-origin: inherit;
+		animation: checked_toggle 200ms ease-in forwards;
+	}
+
+	input:checked + .switch_wrapper {
+		transform-origin: right center;
+		animation-name: checked_wrapper--r;
+	}
+
+	input:checked + .switch_wrapper .switch_toggle {
+		background: red;
+		animation-name: checked_toggle--r;
+	}
+}
+
+@keyframes checked_toggle {
+	0% {
+		background: #fff;
+		transform: translateX(50%);
+	}
+	100% {
+		transform: translateX(-50%);
+	}
+}
+
+@keyframes checked_toggle--r {
+	0% {
+		background: transparent;
+		transform: translateX(-50%);
+	}
+	100% {
+		transform: translateX(50%);
+	}
+}
+
+.check-now {
+    background: transparent;
+    color: #e8e8e8;
+    cursor: pointer;
+    border: none;
+    font-size: 10px;
+    position: relative;
+}
+.check-now:hover::after {
+    content: "Click to manually  check for updates";
+    position: absolute;
+    width: 110px;
+    padding: 5px 8px;
+    border-radius: 5px;
+    background: #212121;
+    top: -200%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+
+
+.delete-btn {
+    background-image: url("icon/delete.png");
+    background-size: cover;
+    width: 14px;
+    height: 14px;
+    margin: auto;
+    cursor: pointer;
+    position: relative;
+}
+.delete-btn:hover::after{
+    content: 'Delete';
+    position: absolute;
+    padding: 5px;
+    border-radius: 5px;
+    background: #212121;
+    font-size: 10px;
+    top: 50%;
+    transform: translate(40%, -50%);
+}
+
+
+
+.add-container{
+    margin-top: 30px;
+}
+.add-container p{
+    font-size: 13px;
+    text-align: center;
+    margin-bottom: 5px;
+}
+.add-site{
+    display: grid;gap: 5px;
+    grid-template:
+        "a a"
+        "b c"
+        / 1fr 1fr;
+}
+.add-site input{
+    padding: 10px 25px;
+    color: #e8e8e8;
+    border: 2px solid #383737;
+    border-radius: 10px;
+    background-color: transparent;
+    outline: none;
+}
+.add-site #input-url{
+    grid-area: a;
+}
+.add-site #input-name{
+    grid-area: b;
+}
+.add-site .add-btn{
+    grid-area: c;
+    border: 2px solid #383737;
+    border-radius: 10px;
+    background-color: transparent;
+    outline: none;
+    color: red;
+    cursor: pointer;
+}
